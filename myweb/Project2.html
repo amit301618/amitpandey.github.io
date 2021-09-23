@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> Form Page</title>
+        <link rel="stylesheet" href="styles.css">
+        		</head>
+            <script>
+              function checkField1(){
+                var fName = document.getElementById("fname").value;
+                var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+      
+          if(re1.test(fName)){
+              document.getElementById("message1").style.color= "green";
+              document.getElementById("message1").innerHTML =  "<strong>valid</strong>";
+              return true;
+          }
+          else{
+              document.getElementById("message1").style.color = "red";
+              document.getElementById("message1").innerHTML = "<strong>Invalid</strong>";
+              return false
+          }
+      }
+      function checkField2(){
+                var lName = document.getElementById("lname").value;
+                var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+      
+          if(re1.test(lName)){
+              document.getElementById("message2").style.color= "green";
+              document.getElementById("message2").innerHTML =  "<strong>valid</strong>";
+              return true;
+          }
+          else{
+              document.getElementById("message2").style.color = "red";
+              document.getElementById("message2").innerHTML = "<strong>Invalid</strong>";
+              return false
+          }
+      }
+              </script>
+<h1>Contact Registration form</h1><br>
+<p>Fill your information here</p>
+
+<img src="https://www.cricbuzz.com/a/img/v1/595x396/i1/c183433/will-ms-dhoni-find-his-way-bac.jpg" alt="M S Dhoni">
+
+<form> 
+First Name:
+<input type="text" id="fname" name="fname" required onblur="checkField1();">
+<span id="message1"></span><br>
+Last name:
+<input type="text" id="lname" name="lname" required onblur="checkField2()">
+<span id="message2"></span><br><br>
+Age:
+<input type="number" id="age" name="age"><br>
+Gender: <br>
+<input type="radio" id="gender" name="gender" value="Male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label><br>
+<label for="phone">Enter a phone number:</label>
+<input type="tel" id="phone" name="phone"
+placeholder="123-456-7890"
+pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+<br>
+<br>
+<p>Which social media platform are you aware?</p><br>
+<input type="checkbox" id="social1" name="social1" value="Facebook">
+  <label for="social1"> Facebook</label><br>
+  <input type="checkbox" id="social2" name="social1" value="Instagram">
+  <label for="social2"> Instagram</label><br>
+  <input type="checkbox" id="social3" name="social3" value="Twitter">
+  <label for="social3"> Twitter</label><br><br>
+
+<input type="reset">
+</form>
+
+
+<br><br><br><br><br>
+<footer>
+	<p>Author: Amit Kumar<br>
+	<a href="mailto:amit.pandey@chitkara.edu.in">Amit Kumar</a></p>
+  </footer>
+</html>

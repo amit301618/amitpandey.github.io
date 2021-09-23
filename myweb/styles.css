@@ -1,0 +1,38 @@
+body {
+background-color: paleturquoise;
+}
+h1{
+    color: red;
+    font-size:200%;
+    font-style: normal;
+    font-family: Helvitca;
+    text-align: center;
+}
+p{
+    text-align: left;
+    color: red;
+    font-size: medium;
+    font-family: Helvetica;
+    }
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+      }
+  h2{
+      text-align: left;
+  }
+  #para1 {
+    color: navy;
+    font-style: italic;
+    
+  }

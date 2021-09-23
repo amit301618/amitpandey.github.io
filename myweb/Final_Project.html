@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> Final Project</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+          #para1 {
+           color: navy;
+           font-style: italic; }
+          .left{
+            text-align: left;
+            color:brown;     }
+        </style>
+        		</head>
+            <script>
+      function checkField1(){
+        var fName = document.getElementById("fname").value;
+        var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+          if(re1.test(fName)){
+            document.getElementById("message1").style.color= "green";
+             document.getElementById("message1").innerHTML =  "<strong>valid</strong>";
+              return true;
+              }
+          else{
+              document.getElementById("message1").style.color = "red";
+              document.getElementById("message1").innerHTML = "<strong>Invalid</strong>";
+              return false
+          }
+      }
+      function checkField2(){
+        var lName = document.getElementById("lname").value;
+        var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+      
+         if(re1.test(lName)){
+            document.getElementById("message2").style.color= "green";
+            document.getElementById("message2").innerHTML =  "<strong>valid</strong>";
+             return true;
+          }
+          else{
+              document.getElementById("message2").style.color = "red";
+              document.getElementById("message2").innerHTML = "<strong>Invalid</strong>";
+              return false
+          }
+      }
+      function mychannel() {
+        document.getElementById("mybutton").onclick = function(){
+        location.href ="https://www.youtube.com/channel/UCQjjcAHLuo8hJjODpLfLVBw"; }
+      }
+      function demo() {
+        document.getElementById("demo").innerHTML = "Thank you for providing your details!"
+        } 
+        
+            </script>
+              
+
+<h1>Onlinelectro:E-Learning Platform</h1><br><br>
+<img src="https://www.litmos.com/wp-content/uploads/2016/06/blog-eLearning-templates.png" alt="Onlinelectro"><br>
+
+<h2>About Onlinelectro</h2>
+<p>Onlinelectro is an e-learning platform to learn about electronics and design your own products.</p>
+<p>We provide end-to-end solution to your peoblems by providing 24x7 support to you.</p>
+<p>We value our customer and focus to serve them better in an holistic way.</p><br><br>
+<p id="para1">Fill your information here</p>
+<form action="#">
+<table> 
+  <tr>
+    <td class="labelcol">First Name:</td>
+    <td class="labeldata"><input type="text" id="fname" name="fname" required onblur="checkField1();"></td>
+    <td class="feedback"><span id="message1"></span></td>
+  </tr>
+  <tr>
+    <td class="labelcol">Last Name:</td>
+    <td class="labeldata"><input type="text" id="lname" name="lname" required onblur="checkField2();"></td>
+    <td class="feedback"><span id="message2"></span></td>
+  </tr>
+  <tr>
+    <td class="labelcol">Age:</td>
+    <td class="labeldata"><input type="number" id="age" name="age"></td>
+    </tr>
+    <tr>
+      <td class="labelcol">Gender:</td>
+      <td class="labeldata"><input type="radio" id="gender" name="gender" value="Male"><label for="male">Male</label>
+        <input type="radio" id="gender" name="gender" value="Female"><label for="female">Female</label>
+        <input type="radio" id="gender" name="gender" value="others"><label for="others">Others</label></td>
+    </tr>
+    <tr>
+      <td class="labelcol">Enter a phone number:</td>
+      <td class="labeldata"><input type="tel" id="phone" name="phone" placeholder="123-456-7890"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+    </tr>
+    <tr>
+      <td class="labelcol">Email Id</td>
+      <td class="labeldata"><input type="email" id="email" name="email"></td>
+      </tr>
+<br>
+</table><br>
+<button  onclick="demo();">ok</button>
+<p id="demo"></p>
+</form>
+<br>
+<br>
+<p>How you come to know about Onlinelectro?</p>
+<form>
+<input type="checkbox" id="social1" name="social1" value="Facebook">
+  <label for="social1"> Facebook</label><br>
+  <input type="checkbox" id="social2" name="social1" value="Instagram">
+  <label for="social2"> Instagram</label><br>
+  <input type="checkbox" id="social3" name="social3" value="Twitter">
+  <label for="social3"> Twitter</label><br>
+  <input type="checkbox" id="social4" name="social3" value="Email">
+  <label for="social4"> Email</label><br>
+  <input type="checkbox" id="social5" name="social3" value="Friends">
+  <label for="social5">Friends</label><br><br>
+
+  <p class="left">Please choose your profile</p>
+  <input type="radio" id="student" name="student" value="student"><label for="student">Student</label><br>
+  <input type="radio" id="faculty" name="faculty" value="faculty"><label for="faculty">Faculty</label><br>
+  <input type="radio" id="Scholar" name="Scholar" value="Scholar"><label for="Scholar">Reserach-Scholar</label><br>
+  </form>
+<br><br>
+<button id="mybutton" class="float-left submit-button" onclick="location.href='https://www.youtube.com/channel/UCQjjcAHLuo8hJjODpLfLVBw'">My Channel</button><br><br>
+
+<footer>
+	<p>Author: Amit Kumar<br>
+	<a href="mailto:amit.pandey@chitkara.edu.in">Amit Kumar</a></p>
+  </footer>
+</html>
